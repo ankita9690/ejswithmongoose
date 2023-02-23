@@ -110,7 +110,10 @@ app.post("/delete",function(req,res){
   }
 });
 
-
-app.listen(3000,function(){
+let port=process.evn.PORT;
+if(port==NULL||port==""){
+  port=3000;
+}
+app.listen(port,function(){
   console.log("server running at port 3000");
 });
